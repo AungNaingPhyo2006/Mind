@@ -1,0 +1,221 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/BABY GIRLY.otf",
+      "sha1": "3f10790e1821a7a36df197f4908289437c7b30b5"
+    },
+    {
+      "path": "src/assets/fonts/BILLO___.TTF",
+      "sha1": "c6f239a4d3a38e6a44ad83d61dc32f8dcd9adb87"
+    },
+    {
+      "path": "src/assets/fonts/CHERI___.TTF",
+      "sha1": "517e308fbcc88b7680e897ab6edf6fa2ef43353e"
+    },
+    {
+      "path": "src/assets/fonts/CHERL___.TTF",
+      "sha1": "9890c8a6fa326a27bb341470ba05e162d696fe04"
+    },
+    {
+      "path": "src/assets/fonts/CREAMBOL.TTF",
+      "sha1": "a27f7929c1d460fd8e6c9740fdbfbb7756e1c6d2"
+    },
+    {
+      "path": "src/assets/fonts/CREAMEXB.TTF",
+      "sha1": "a2ac08935842c3365f3f79788028371e924a076f"
+    },
+    {
+      "path": "src/assets/fonts/CREAMREG.TTF",
+      "sha1": "d1217d7682a59f206d2fb854ed16c5b97582d1cd"
+    },
+    {
+      "path": "src/assets/fonts/Candcu__.ttf",
+      "sha1": "5e8d6982ec397d5c0808ce7b7359b1be564eb900"
+    },
+    {
+      "path": "src/assets/fonts/CandyHeart.ttf",
+      "sha1": "a6b4b583f489e3d197dd62b29626878d41aa2389"
+    },
+    {
+      "path": "src/assets/fonts/Chococooky.ttf",
+      "sha1": "37dc17d074e289a7f49e5c2a97eac03f58a3b933"
+    },
+    {
+      "path": "src/assets/fonts/CookieMonster.ttf",
+      "sha1": "c540772d436c0ba7df2ce30e6773363290bb7d6c"
+    },
+    {
+      "path": "src/assets/fonts/Cookies.ttf",
+      "sha1": "6c7d7c6f79a6e5b36796d34462eedbbdf971d87a"
+    },
+    {
+      "path": "src/assets/fonts/CupiddeLocke.ttf",
+      "sha1": "1f01ceb3a69d0c9a5fa10df6953e6d9c3d44e865"
+    },
+    {
+      "path": "src/assets/fonts/DENNEpuffy-hearts.ttf",
+      "sha1": "c43d96db44316311ef7f8e144d8f1199e94f3374"
+    },
+    {
+      "path": "src/assets/fonts/Dinomiko Font by 7NTypes.otf",
+      "sha1": "463786bc68a34d05a418b1d479e2564b79a7fd16"
+    },
+    {
+      "path": "src/assets/fonts/EmilysCandy-Regular.ttf",
+      "sha1": "90d137841147da369997026ef34c6aabeb49a3ad"
+    },
+    {
+      "path": "src/assets/fonts/FROSTY__.TTF",
+      "sha1": "023f00026233f4ecc9ab4ff40f57b94b87f7c77c"
+    },
+    {
+      "path": "src/assets/fonts/JULIET__.TTF",
+      "sha1": "eb0736c713ec5c9f7064e88865c9b2cf7e3c77a6"
+    },
+    {
+      "path": "src/assets/fonts/KINKEE__.TTF",
+      "sha1": "58e1422fa279ef0e6426b789aaa026811cdb7fb5"
+    },
+    {
+      "path": "src/assets/fonts/Kawaii Stitch.ttf",
+      "sha1": "5470481a5cdb48d475e569c688f5415a9c6bd305"
+    },
+    {
+      "path": "src/assets/fonts/King Cool KC.ttf",
+      "sha1": "28784ef5b909fad01793ab5f47d4b620335e53cb"
+    },
+    {
+      "path": "src/assets/fonts/KittenBoldTrial.ttf",
+      "sha1": "3a09d0b05f1992788e034ed187f9407392f39fcc"
+    },
+    {
+      "path": "src/assets/fonts/KittenFatTrial.ttf",
+      "sha1": "0ee22c35c8e75e51da1e3be66db9dd4c21d1ec32"
+    },
+    {
+      "path": "src/assets/fonts/KittenSlantTrial.ttf",
+      "sha1": "1784840daa3efce23d3f190709778093ecf72c68"
+    },
+    {
+      "path": "src/assets/fonts/KittenSwashMonolineTrial.ttf",
+      "sha1": "0381070d628c7b75b215bac2527e894d106d8665"
+    },
+    {
+      "path": "src/assets/fonts/KittenSwashTrial.ttf",
+      "sha1": "07b990d7041179f504926bb8d7cfdd898709c651"
+    },
+    {
+      "path": "src/assets/fonts/LT Chickenhawk.ttf",
+      "sha1": "1d1e2fe72238d50c7ccc6fe45e669ec16331c55e"
+    },
+    {
+      "path": "src/assets/fonts/LetterGothicStd-Bold.otf",
+      "sha1": "08f44a2d361199d3561d03137d52ea3d67dc7520"
+    },
+    {
+      "path": "src/assets/fonts/LetterGothicStd.otf",
+      "sha1": "417ccf70b174cd8daba70762f3ba0d772e2dad2a"
+    },
+    {
+      "path": "src/assets/fonts/Lollipop.ttf",
+      "sha1": "72ee849fa7a9656d40a8cde220d64fa311a18d1e"
+    },
+    {
+      "path": "src/assets/fonts/MOONYCAT.TTF",
+      "sha1": "e38a42aafddd20d13d382b6d0c7884b3df64e695"
+    },
+    {
+      "path": "src/assets/fonts/Midnight One.otf",
+      "sha1": "a3d37e76e8edc0f661d9e7453c7ee893d75a5d88"
+    },
+    {
+      "path": "src/assets/fonts/Midnight One.ttf",
+      "sha1": "e3d664a3dd9d9fae3df47c755d426ce37ea28113"
+    },
+    {
+      "path": "src/assets/fonts/Midnight.otf",
+      "sha1": "6b100967c0b608d4a60b48e79056fd3f25357398"
+    },
+    {
+      "path": "src/assets/fonts/Midnight.ttf",
+      "sha1": "fc9b6f63a576b65055e28c52d032afffe0f531f4"
+    },
+    {
+      "path": "src/assets/fonts/MilkCocoa(sRB).TTF",
+      "sha1": "336ebbae5f284b08e44e2f86a4b6abfad1b626d0"
+    },
+    {
+      "path": "src/assets/fonts/Pink Script R1.otf",
+      "sha1": "d7db134ed93e0143934a22ff943f8a3f2e979677"
+    },
+    {
+      "path": "src/assets/fonts/PinkCandyPopcornBats.ttf",
+      "sha1": "a14b3fc4027b92096de22d09799387eadccbc7e9"
+    },
+    {
+      "path": "src/assets/fonts/PinkCandyPopcornFont.ttf",
+      "sha1": "22624ad55fb09125303b6d0a58827879e24aa29d"
+    },
+    {
+      "path": "src/assets/fonts/REBECCA_.TTF",
+      "sha1": "25bfdb0c21413cddb2f170bc907a565232503e9e"
+    },
+    {
+      "path": "src/assets/fonts/Sweetie Pie.ttf",
+      "sha1": "1411b380eba37209408607d6aab605ea97bfffe2"
+    },
+    {
+      "path": "src/assets/fonts/Thinking_of_Betty.ttf",
+      "sha1": "8f7e5d877746c90cab1ba895376468eeefae66b6"
+    },
+    {
+      "path": "src/assets/fonts/almonte snow.ttf",
+      "sha1": "d92a29694d804c76672dd59bb74fd28817be6054"
+    },
+    {
+      "path": "src/assets/fonts/almonte woodgrain.ttf",
+      "sha1": "0d16c4ddb45fd9d79feff7897c526550c3dc527f"
+    },
+    {
+      "path": "src/assets/fonts/almonte.ttf",
+      "sha1": "76d034274061d47f41a84b4b71b71754c5f0109f"
+    },
+    {
+      "path": "src/assets/fonts/arsenale_white.ttf",
+      "sha1": "942de35578d060aa48cc1411a6498ef4f946fac7"
+    },
+    {
+      "path": "src/assets/fonts/chunky font.ttf",
+      "sha1": "9a5d193187f49091481b5f345238fe58396e71fb"
+    },
+    {
+      "path": "src/assets/fonts/cocoon.TTF",
+      "sha1": "032123df6a3c9ffce4b19b561bbc228c20579788"
+    },
+    {
+      "path": "src/assets/fonts/exmouth_.ttf",
+      "sha1": "707b153f71710460aaa52179d35d54c003ce3f93"
+    },
+    {
+      "path": "src/assets/fonts/gotham-medium.ttf",
+      "sha1": "74c87f67010f63777e33c5114c76b1fc67e4ae5b"
+    },
+    {
+      "path": "src/assets/fonts/heart_heaven.ttf",
+      "sha1": "177f4e21df6ffa764fb7f37c704e564728163ed7"
+    },
+    {
+      "path": "src/assets/fonts/moon_font.TTF",
+      "sha1": "e21f1eb0c3f4c2264b9d86775f66248caf341d08"
+    },
+    {
+      "path": "src/assets/fonts/romanticfont2.ttf",
+      "sha1": "e5130b586248e91c3f0e0936973cc72ffa8ca61f"
+    },
+    {
+      "path": "src/assets/fonts/sweet.ttf",
+      "sha1": "8a8edabd0b9529db95f2eac2d9b7e98b95e205c4"
+    }
+  ]
+}

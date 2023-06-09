@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>AwesomeProject</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>gotham-medium.ttf</string>
+		<string>BABY GIRLY.otf</string>
+		<string>Dinomiko Font by 7NTypes.otf</string>
+		<string>LetterGothicStd-Bold.otf</string>
+		<string>LetterGothicStd.otf</string>
+		<string>Midnight One.otf</string>
+		<string>Midnight.otf</string>
+		<string>Pink Script R1.otf</string>
+		<string>Candcu__.ttf</string>
+		<string>CandyHeart.ttf</string>
+		<string>Chococooky.ttf</string>
+		<string>CookieMonster.ttf</string>
+		<string>Cookies.ttf</string>
+		<string>CupiddeLocke.ttf</string>
+		<string>DENNEpuffy-hearts.ttf</string>
+		<string>EmilysCandy-Regular.ttf</string>
+		<string>Kawaii Stitch.ttf</string>
+		<string>King Cool KC.ttf</string>
+		<string>KittenBoldTrial.ttf</string>
+		<string>KittenFatTrial.ttf</string>
+		<string>KittenSlantTrial.ttf</string>
+		<string>KittenSwashMonolineTrial.ttf</string>
+		<string>KittenSwashTrial.ttf</string>
+		<string>LT Chickenhawk.ttf</string>
+		<string>Lollipop.ttf</string>
+		<string>Midnight One.ttf</string>
+		<string>Midnight.ttf</string>
+		<string>PinkCandyPopcornBats.ttf</string>
+		<string>PinkCandyPopcornFont.ttf</string>
+		<string>Sweetie Pie.ttf</string>
+		<string>Thinking_of_Betty.ttf</string>
+		<string>almonte snow.ttf</string>
+		<string>almonte woodgrain.ttf</string>
+		<string>almonte.ttf</string>
+		<string>arsenale_white.ttf</string>
+		<string>chunky font.ttf</string>
+		<string>exmouth_.ttf</string>
+		<string>heart_heaven.ttf</string>
+		<string>romanticfont2.ttf</string>
+		<string>sweet.ttf</string>
+	</array>
+</dict>
+</plist>

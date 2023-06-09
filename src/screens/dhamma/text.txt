@@ -1,0 +1,118 @@
+  <View style={styles.container}>
+        <View style={styles.subContainer}>
+          <TouchableOpacity
+            style={styles.imgContainer}
+            onPress={() => {
+              // Alert.alert('', 'Hello');
+              toggleVisible;
+            }}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+        </View>
+        {/* <=====================> */}
+        <View style={styles.subContainer}>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+        </View>
+        {/* <=====================> */}
+        <View style={styles.subContainer}>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+        </View>
+        {/* <=====================> */}
+        <View style={styles.subContainer}>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgContainer}>
+            <Image
+              source={AssetResource.dhamma_wheel}
+              style={styles.imageStyle}
+            />
+          </TouchableOpacity>
+        </View>
+        {/* <=====================> */}
+      </View>
+      {/* <================> */}
+
+        container: {
+    flex: 1,
+    marginHorizontal: 20,
+    // backgroundColor: 'red',
+    marginVertical: 60,
+  },
+  subContainer: {
+    // backgroundColor: 'pink',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 30,
+  },
+  imgContainer: {
+    width: 90,
+    height: 90,
+    backgroundColor: 'green',
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imageStyle: {
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+  },
