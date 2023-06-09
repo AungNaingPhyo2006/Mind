@@ -29,7 +29,9 @@ const TabNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{headerShown: false}}>
+      <Tab.Navigator
+        screenOptions={{headerShown: false}}
+        initialRouteName="Home">
         <Tab.Screen
           name="Dhamma"
           component={DhammaStack}
