@@ -15,6 +15,7 @@ const VideoScreen = ({videoIds}) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [videoMeta, setVideoMeta] = useState([]);
+  const [visibleVideoIndices, setVisibleVideoIndices] = useState([]);
 
   useEffect(() => {
     const fetchVideoMeta = async () => {
@@ -44,9 +45,36 @@ const VideoScreen = ({videoIds}) => {
   const togglePlaying = useCallback(() => {
     setPlaying(prev => !prev);
   }, []);
+  //<==========lazy loading=============>
+  const handleScroll = useCallback(
+    event => {
+      const {nativeEvent} = event;
+      const contentOffsetY = nativeEvent.contentOffset.y;
+      const contentHeight = nativeEvent.contentSize.height;
+      const containerHeight = nativeEvent.layoutMeasurement.height;
 
+      const visibleIndices = [];
+
+      // Calculate the range of visible videos based on scroll position
+      for (let i = 0; i < videoMeta.length; i++) {
+        const itemOffset = i * 250; // Assuming each item has a fixed height of 250
+        const itemHeight = 250;
+        const itemEnd = itemOffset + itemHeight;
+
+        if (
+          itemOffset <= contentOffsetY + containerHeight &&
+          itemEnd >= contentOffsetY
+        ) {
+          visibleIndices.push(i);
+        }
+      }
+
+      setVisibleVideoIndices(visibleIndices);
+    },
+    [videoMeta],
+  );
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} onScroll={handleScroll}>
       {videoMeta.map((meta, index) => (
         <View
           key={videoIds[index]}

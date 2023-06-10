@@ -22,7 +22,7 @@ import {
   Video,
 } from 'lucide-react-native';
 import {useTranslation} from 'react-i18next';
-import {videoIds} from '../utils/VideoData';
+
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   const {t} = useTranslation();
@@ -36,12 +36,14 @@ const TabNavigator = () => {
           name="Dhamma"
           component={DhammaStack}
           options={{
+            // tabBarBadge: 3,
+
             tabBarIcon: ({color, size}) => (
               <>
                 <FerrisWheel color={color} size={size} />
-                <Badge style={{position: 'absolute', top: -5, left: 45}}>
+                {/* <Badge style={{position: 'absolute', top: -5, left: 45}}>
                   {videoIds.length}
-                </Badge>
+                </Badge> */}
               </>
             ),
           }}

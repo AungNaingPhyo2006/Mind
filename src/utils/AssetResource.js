@@ -1,4 +1,5 @@
 export default {
+  buddha1: require('../assets/images/BuddhaImage-3.gif'),
   buddha: require('../assets/images/buddha.png'),
   wheel: require('../assets/images/dhamma-wheel.png'),
   dhamma_wheel: require('../assets/images/dhamma.png'),
@@ -7,4 +8,8 @@ export default {
   dhamma_3: require('../assets/images/thidagu.jpeg'),
   dhamma_4: require('../assets/images/kyarNiKan.jpeg'),
   dhamma_5: require('../assets/images/delohh.jpeg'),
+  dhamma_6: require('../assets/images/phyu.jpeg'),
+  dhamma_7: require('../assets/images/uztk.jpg'),
+  dhamma_8: require('../assets/images/tsss.jpeg'),
+  dhamma_9: require('../assets/images/cmrm.jpeg'),
 };

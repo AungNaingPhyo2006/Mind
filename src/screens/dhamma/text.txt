@@ -116,3 +116,68 @@
     height: 80,
     borderRadius: 50,
   },
+
+
+  <=============================================>
+
+   const spinValue = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    startAnimation();
+  }, []);
+
+  const startAnimation = () => {
+    Animated.loop(
+      Animated.timing(spinValue, {
+        toValue: 1,
+        duration: 3000,
+        easing: Easing.linear,
+        useNativeDriver: true,
+      }),
+    ).start();
+  };
+
+  const spin = spinValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  });
+<View style={styles.container}>
+  <View style={styles.subContainer}>
+    <View style={{flex: 1, flexDirection: 'row'}}>
+      <View style={styles.imgContainer}>
+        <Image source={AssetResource.dhamma_1} style={styles.imageStyle} />
+      </View>
+      <View style={{flex: 1, backgroundColor: 'green'}}>
+        <Text style={{color: 'blue'}}>Hello</Text>
+      </View>
+    </View>
+  </View>
+  {/* <===========> */}
+  <View style={styles.imgContainer}>
+    <Image source={AssetResource.dhamma_2} style={styles.imageStyle} />
+  </View>
+  {/* <===========> */}
+  <View style={styles.imgContainer}>
+    <Image source={AssetResource.dhamma_3} style={styles.imageStyle} />
+  </View>
+
+  {/* <=====Sub container end======> */}
+
+  <View style={styles.subContainer}>
+    <View style={styles.imgContainer}>
+      <Image source={AssetResource.dhamma_4} style={styles.imageStyle} />
+    </View>
+    {/* <===========> */}
+    <View style={styles.imgContainer}>
+      <Image source={AssetResource.dhamma_5} style={styles.imageStyle} />
+    </View>
+    {/* <===========> */}
+    <TouchableOpacity style={styles.imgContainer} onPress={toggleVisible}>
+      <Animated.View style={{transform: [{rotate: spin}]}}>
+        <Image source={AssetResource.dhamma_wheel} style={styles.imageStyle} />
+      </Animated.View>
+    </TouchableOpacity>
+  </View>
+
+  {/* <===============> */}
+</View>;
