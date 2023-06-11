@@ -32,12 +32,19 @@ import {convertMmDigit} from '../../utils/MyanmarNum';
 import {useTranslation} from 'react-i18next';
 
 const SayarDaw = ({navigation}) => {
-  const {lang} = useAppState(state => ({
-    lang: state.lang,
-  }));
+  const {lang, modalVisible, setModalVisible, data, setData} = useAppState(
+    state => ({
+      lang: state.lang,
+      modalVisible: state.modalVisible,
+      setModalVisible: state.setModalVisible,
+      data: state.data,
+      setData: state.setData,
+    }),
+  );
+
   const {t} = useTranslation();
-  const [modalVisible, setModalVisible] = useState(false);
-  const [data, setData] = useState(null);
+  // const [modalVisible, setModalVisible] = useState(false);
+  // const [data, setData] = useState(null);
   const toggleVisible = () => {
     setModalVisible(true);
   };

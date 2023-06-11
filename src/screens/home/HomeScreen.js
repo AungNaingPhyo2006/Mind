@@ -1,12 +1,35 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import TextSlider from '../../utils/TextSlider';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import Carousels from '../../utils/Carousels';
+import AssetResource from '../../utils/AssetResource';
 
 const HomeScreen = ({navigation}) => {
-  const texts = ['Text 1 loram', 'Text 2', 'Text 3', 'Text 4', 'Text 5'];
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
+      <View
+        style={{
+          alignItems: 'center',
+        }}>
+        <Image
+          source={AssetResource.buddha1}
+          style={{width: wp('100%'), height: hp('60%')}}
+        />
+      </View>
+      <View style={{backgroundColor: 'orange'}}>
+        <View
+          style={{
+            marginVertical: 12,
+            height: hp('30%'),
+            width: wp('100%'),
+            alignItems: 'center',
+          }}>
+          <Carousels />
+        </View>
+      </View>
     </View>
   );
 };
@@ -16,9 +39,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: 'pink',
-    marginHorizontal: 12,
   },
 });

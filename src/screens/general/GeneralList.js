@@ -59,10 +59,10 @@ const GeneralList = () => {
   };
 
   const spin = spinValue.interpolate({
-    // inputRange: [0, 1],
-    // outputRange: ['0deg', '360deg'],
-    inputRange: [0, 0],
-    outputRange: ['0deg', '0deg'],
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+    // inputRange: [0, 0],
+    // outputRange: ['0deg', '0deg'],
   });
 
   return (
