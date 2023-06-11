@@ -31,9 +31,9 @@ const TabNavigator = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Home">
+        initialRouteName={t('home')}>
         <Tab.Screen
-          name="Dhamma"
+          name={t('dhamma')}
           component={DhammaStack}
           options={{
             // tabBarBadge: 3,
@@ -50,7 +50,7 @@ const TabNavigator = () => {
         />
 
         <Tab.Screen
-          name="General"
+          name={t('general')}
           component={GeneralStack}
           options={{
             tabBarIcon: ({color, size}) => (
@@ -60,7 +60,7 @@ const TabNavigator = () => {
         />
 
         <Tab.Screen
-          name="Home"
+          name={t('home')}
           component={HomeStack}
           // options={{tabBarBadge: 3}}
           options={{
@@ -68,14 +68,14 @@ const TabNavigator = () => {
           }}
         />
         <Tab.Screen
-          name="Short"
+          name={t('short')}
           component={ShortStack}
           options={{
             tabBarIcon: ({color, size}) => <Video color={color} size={size} />,
           }}
         />
         <Tab.Screen
-          name="Setting"
+          name={t('settings')}
           component={SettingStack}
           options={{
             tabBarIcon: ({color, size}) => (

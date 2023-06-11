@@ -1,9 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import TabNavigator from './src/navigator/TabNavigator';
 import SplashScreen from './src/screens/splash/SplashScreen';
+import useAppState from './src/constant/Zustand';
+import i18n from './i18n.config';
+import {I18nextProvider} from 'react-i18next';
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-
+  const {lang} = useAppState(state => ({
+    lang: state.lang,
+  }));
+  const handleLanguageChange = lng => {
+    i18n.changeLanguage(lng);
+  };
   useEffect(() => {
     // Simulating a loading delay
     setTimeout(() => {
@@ -15,7 +24,11 @@ const App = () => {
     return <SplashScreen />;
   }
 
-  return <TabNavigator />;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <TabNavigator onLanguageChange={handleLanguageChange} />
+    </I18nextProvider>
+  );
 };
 
 export default App;

@@ -36,7 +36,7 @@ const RefreshIcon = ({handleRefresh}) => {
 
   return (
     <View style={styles.offlineContainer}>
-      <Text style={styles.offlineText}>No Internet Connection</Text>
+      <Text style={styles.offlineText}>{t('no internet')}</Text>
       <TouchableOpacity onPress={handleRefresh} style={styles.iconStyle}>
         <Animated.View style={{transform: [{rotate: spin}]}}>
           <RefreshCcw size={24} color="blue" />

@@ -28,8 +28,14 @@ import {
 import DhammaModal from '../dhamma/DhammaModal';
 import AssetResource from '../../utils/AssetResource';
 import {Badge} from 'react-native-paper';
+import {useTranslation} from 'react-i18next';
+import {convertMmDigit} from '../../utils/MyanmarNum';
 
 const GeneralList = () => {
+  const {t} = useTranslation();
+  const {lang} = useAppState(state => ({
+    lang: state.lang,
+  }));
   const [modalVisible, setModalVisible] = useState(false);
   const [data, setData] = useState(null);
   const toggleVisible = () => {
@@ -53,14 +59,14 @@ const GeneralList = () => {
   };
 
   const spin = spinValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-    // inputRange: [0, 0],
-    // outputRange: ['0deg', '0deg'],
+    // inputRange: [0, 1],
+    // outputRange: ['0deg', '360deg'],
+    inputRange: [0, 0],
+    outputRange: ['0deg', '0deg'],
   });
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'pink'}}>
       <DhammaModal
         setModalVisible={setModalVisible}
         modalVisible={modalVisible}
@@ -74,7 +80,7 @@ const GeneralList = () => {
           backgroundColor: 'darkred',
           paddingVertical: 10,
         }}>
-        <Text style={{color: 'white'}}>အထွေထွေ</Text>
+        <Text style={{color: 'white'}}>{t('general')}</Text>
       </View>
       <ScrollView
         style={{
@@ -96,7 +102,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(foodId1);
             }}>
-            <Text style={{color: 'white'}}>ဟင်းချက်နည်းများ</Text>
+            <Text style={{color: 'white'}}>{t('recipes')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -106,7 +112,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {foodId1.length}
+              {lang == 'en' ? foodId1.length : convertMmDigit(foodId1.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -122,7 +128,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(foodId2);
             }}>
-            <Text style={{color: 'white'}}>မုန့်လုပ်နည်းများ</Text>
+            <Text style={{color: 'white'}}>{t('cake')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -132,7 +138,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {foodId2.length}
+              {lang == 'en' ? foodId2.length : convertMmDigit(foodId2.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -148,7 +154,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(health);
             }}>
-            <Text style={{color: 'white'}}>ကျန်းမာရေး</Text>
+            <Text style={{color: 'white'}}>{t('healthy')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -158,7 +164,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {health.length}
+              {lang == 'en' ? health.length : convertMmDigit(health.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -174,7 +180,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(lecture);
             }}>
-            <Text style={{color: 'white'}}>စာပေ</Text>
+            <Text style={{color: 'white'}}>{t('lecture')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -184,7 +190,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {lecture.length}
+              {lang == 'en' ? lecture.length : convertMmDigit(lecture.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -200,7 +206,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(japanese);
             }}>
-            <Text style={{color: 'white'}}>ဂျပန်ဘာသာစကား</Text>
+            <Text style={{color: 'white'}}>{t('japanese')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -210,7 +216,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {japanese.length}
+              {lang == 'en' ? japanese.length : convertMmDigit(japanese.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -226,7 +232,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(english);
             }}>
-            <Text style={{color: 'white'}}>အင်္ဂလိပ်ဘာသာစကား</Text>
+            <Text style={{color: 'white'}}>{t('english')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -236,7 +242,7 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {english.length}
+              {lang == 'en' ? english.length : convertMmDigit(english.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -252,7 +258,7 @@ const GeneralList = () => {
               toggleVisible();
               setData(entertainment);
             }}>
-            <Text style={{color: 'white'}}>ဖျော်ဖြေရေး</Text>
+            <Text style={{color: 'white'}}>{t('entertainment')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -262,7 +268,9 @@ const GeneralList = () => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {entertainment.length}
+              {lang == 'en'
+                ? entertainment.length
+                : convertMmDigit(entertainment.length)}
             </Badge>
           </TouchableOpacity>
         </View>

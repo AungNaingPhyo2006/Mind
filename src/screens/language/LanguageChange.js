@@ -14,11 +14,12 @@ const LanguageChange = () => {
     lang: state.lang,
     setLang: state.setLang,
   }));
-  useEffect(() => {
-    console.log('lang', lang);
-  }, [lang]);
+
   return (
     <View style={styles.container}>
+      <Text style={{alignSelf: 'center', marginVertical: 12, color: 'blue'}}>
+        {t('change Language')}
+      </Text>
       <TouchableOpacity
         style={{...styles.box, backgroundColor: 'pink'}}
         onPress={() => {
@@ -36,7 +37,6 @@ const LanguageChange = () => {
         <Text style={{color: 'white', fontSize: 16}}>မြန်မာ</Text>
         {lang === 'mm' && <Check color="#514BC3" size={24} />}
       </TouchableOpacity>
-      <Text style={{color: 'blue', alignSelf: 'center'}}>{t('settings')}</Text>
     </View>
   );
 };

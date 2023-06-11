@@ -27,8 +27,15 @@ import {
   videoId9,
 } from '../../utils/VideoData';
 import DhammaModal from './DhammaModal';
+import useAppState from '../../constant/Zustand';
+import {convertMmDigit} from '../../utils/MyanmarNum';
+import {useTranslation} from 'react-i18next';
 
 const SayarDaw = ({navigation}) => {
+  const {lang} = useAppState(state => ({
+    lang: state.lang,
+  }));
+  const {t} = useTranslation();
   const [modalVisible, setModalVisible] = useState(false);
   const [data, setData] = useState(null);
   const toggleVisible = () => {
@@ -50,7 +57,7 @@ const SayarDaw = ({navigation}) => {
           backgroundColor: 'darkred',
           paddingVertical: 10,
         }}>
-        <Text style={{color: 'white'}}>ဓမ္မကထိက ဆရာတော်များ</Text>
+        <Text style={{color: 'white'}}>{t('preachers')}</Text>
       </View>
       <ScrollView
         style={{
@@ -70,7 +77,7 @@ const SayarDaw = ({navigation}) => {
               toggleVisible();
               setData(videoId1);
             }}>
-            <Text style={{color: 'white'}}>ဖားအောက်တောရ ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('paauk')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -80,7 +87,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId1.length}
+              {lang == 'en' ? videoId1.length : convertMmDigit(videoId1.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -96,7 +103,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId2);
             }}>
-            <Text style={{color: 'white'}}>ပါမောက္ခချုပ် ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('vndml')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -106,7 +113,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId2.length}
+              {lang == 'en' ? videoId2.length : convertMmDigit(videoId2.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -122,7 +129,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId3);
             }}>
-            <Text style={{color: 'white'}}>သီတဂူ ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('ttg')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -132,7 +139,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId3.length}
+              {lang == 'en' ? videoId3.length : convertMmDigit(videoId3.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -148,7 +155,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId4);
             }}>
-            <Text style={{color: 'white'}}>ကြာနီကန် ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('knk')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -158,7 +165,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId4.length}
+              {lang == 'en' ? videoId4.length : convertMmDigit(videoId4.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -174,7 +181,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId5);
             }}>
-            <Text style={{color: 'white'}}>ဆရာတော် ဦးသုမင်္ဂလ</Text>
+            <Text style={{color: 'white'}}>{t('utmgl')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -184,7 +191,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId5.length}
+              {lang == 'en' ? videoId5.length : convertMmDigit(videoId5.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -200,7 +207,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId6);
             }}>
-            <Text style={{color: 'white'}}>ဖြူး ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('znpt')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -210,7 +217,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId6.length}
+              {lang == 'en' ? videoId6.length : convertMmDigit(videoId6.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -226,7 +233,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId7);
             }}>
-            <Text style={{color: 'white'}}>ဆရာတော် ဦးဇောတိက</Text>
+            <Text style={{color: 'white'}}>{t('ztk')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -236,7 +243,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId7.length}
+              {lang == 'en' ? videoId7.length : convertMmDigit(videoId7.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -252,7 +259,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId8);
             }}>
-            <Text style={{color: 'white'}}>သစ္စာရွှေစည် ဆရာတော်</Text>
+            <Text style={{color: 'white'}}>{t('tsss')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -262,7 +269,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId8.length}
+              {lang == 'en' ? videoId8.length : convertMmDigit(videoId8.length)}
             </Badge>
           </TouchableOpacity>
         </View>
@@ -278,7 +285,7 @@ const SayarDaw = ({navigation}) => {
               setModalVisible(!modalVisible);
               setData(videoId9);
             }}>
-            <Text style={{color: 'white'}}>ဘဒ္ဒန္တတေဇောသာရ</Text>
+            <Text style={{color: 'white'}}>{t('bgsyd')}</Text>
             <Badge
               style={{
                 position: 'absolute',
@@ -288,7 +295,7 @@ const SayarDaw = ({navigation}) => {
                 color: 'red',
                 fontWeight: 'bold',
               }}>
-              {videoId9.length}
+              {lang == 'en' ? videoId9.length : convertMmDigit(videoId9.length)}
             </Badge>
           </TouchableOpacity>
         </View>

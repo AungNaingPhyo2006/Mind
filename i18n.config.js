@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import en from './src/languages/en.json';
 import mm from './src/languages/mm.json';
-
+console.log(mm);
 const resources = {
   en: {
     translation: en,
