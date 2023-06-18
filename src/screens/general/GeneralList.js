@@ -10,6 +10,7 @@ import {
   Image,
   Animated,
   Easing,
+  Alert,
 } from 'react-native';
 import useAppState from '../../constant/Zustand';
 import VideoScreen from '../youtube/VideoScreen';
@@ -30,6 +31,7 @@ import AssetResource from '../../utils/AssetResource';
 import {Badge} from 'react-native-paper';
 import {useTranslation} from 'react-i18next';
 import {convertMmDigit} from '../../utils/MyanmarNum';
+import CountModal from './CountModal';
 
 const GeneralList = () => {
   const {t} = useTranslation();
@@ -37,6 +39,7 @@ const GeneralList = () => {
     lang: state.lang,
   }));
   const [modalVisible, setModalVisible] = useState(false);
+  const [countModal, setCountModal] = useState(false);
   const [data, setData] = useState(null);
   const toggleVisible = () => {
     setModalVisible(true);
@@ -59,10 +62,10 @@ const GeneralList = () => {
   };
 
   const spin = spinValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-    // inputRange: [0, 0],
-    // outputRange: ['0deg', '0deg'],
+    // inputRange: [0, 1],
+    // outputRange: ['0deg', '360deg'],
+    inputRange: [0, 0],
+    outputRange: ['0deg', '0deg'],
   });
 
   return (
@@ -72,6 +75,7 @@ const GeneralList = () => {
         modalVisible={modalVisible}
         videoIds={data}
       />
+      <CountModal countModal={countModal} setCountModal={setCountModal} />
       {/* <========modal end=======> */}
       <View
         style={{
@@ -91,6 +95,20 @@ const GeneralList = () => {
           paddingVertical: 12,
         }}
         showsVerticalScrollIndicator={false}>
+        <View style={styles.container}>
+          <Animated.View
+            style={{...styles.imgContainer, transform: [{rotate: spin}]}}>
+            <Image source={AssetResource.wheel} style={styles.imageStyle} />
+          </Animated.View>
+          <TouchableOpacity
+            style={styles.txtContainer}
+            onPress={() => {
+              setCountModal(!countModal);
+            }}>
+            <Text style={{color: 'white'}}>{t('count')}</Text>
+          </TouchableOpacity>
+        </View>
+        {/* <======================> */}
         <View style={styles.container}>
           <Animated.View
             style={{...styles.imgContainer, transform: [{rotate: spin}]}}>

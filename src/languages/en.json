@@ -24,5 +24,7 @@
   "japanese":"Japanese",
   "english":"English",
   "entertainment" :"Entertainment",
+  "count": "Tellbeads",
+  "times": "Times",
   "version" : "Version"
 }
