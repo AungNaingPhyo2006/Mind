@@ -16,11 +16,19 @@ import {
 } from 'react-native-responsive-screen';
 import useAppState from '../../constant/Zustand';
 import {convertMmDigit} from '../../utils/MyanmarNum';
-const CountModal = ({countModal, setCountModal}) => {
-  const {t} = useTranslation();
+const CountModal = ({
+  countModal,
+  setCountModal,
+  count,
+  setCount,
+  increment,
+}) => {
   const {lang} = useAppState(state => ({
     lang: state.lang,
   }));
+
+  const {t} = useTranslation();
+
   return (
     <View>
       <Modal
@@ -28,7 +36,6 @@ const CountModal = ({countModal, setCountModal}) => {
         transparent={true}
         visible={countModal}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
           setCountModal(!countModal);
         }}>
         <View style={styles.centeredView}>
@@ -44,6 +51,7 @@ const CountModal = ({countModal, setCountModal}) => {
               <View style={{}}>
                 <Text style={styles.modalText}>{t('count')}</Text>
               </View>
+
               <Pressable
                 style={[styles.button, styles.buttonOpen]}
                 onPress={() => setCountModal(!countModal)}>
@@ -54,25 +62,37 @@ const CountModal = ({countModal, setCountModal}) => {
             <View
               style={{
                 flex: 1,
-                // marginHorizontal: 28,
-                // paddingVertical: 35,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
               <View
                 style={{
+                  padding: 9,
                   width: wp('60%'),
-                  height: hp('5%'),
-                  marginVertical: 18,
+                  height: hp('9%'),
+                  marginVertical: hp('11%'),
                   backgroundColor: 'white',
                   justifyContent: 'center',
                   alignItems: 'center',
                   borderRadius: 10,
+                  elevation: 9,
                 }}>
-                <Text style={{color: 'blue'}}>
-                  {lang == 'en' ? 100 : convertMmDigit(100)}-{t('times')}
+                <Text style={{color: 'blue', fontSize: 18, fontWeight: 'bold'}}>
+                  {lang == 'en' ? count : convertMmDigit(count)} - {t('times')}
                 </Text>
               </View>
+              <Pressable
+                style={{
+                  backgroundColor: '#24a0ed',
+                  padding: 6,
+                  marginVertical: 18,
+                  borderRadius: 5,
+                }}
+                onPress={() => {
+                  setCount(0);
+                }}>
+                <Text style={{color: 'white'}}>{t('reset')}</Text>
+              </Pressable>
               <TouchableOpacity
                 style={{
                   backgroundColor: 'yellow',
@@ -80,8 +100,9 @@ const CountModal = ({countModal, setCountModal}) => {
                   height: hp('30%'),
                   borderRadius: 150,
                   borderColor: 'white',
-                  borderWidth: 3,
-                }}></TouchableOpacity>
+                  borderWidth: 6,
+                }}
+                onPress={increment}></TouchableOpacity>
             </View>
           </View>
         </View>

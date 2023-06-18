@@ -38,11 +38,15 @@ const GeneralList = () => {
   const {lang} = useAppState(state => ({
     lang: state.lang,
   }));
+  const [count, setCount] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [countModal, setCountModal] = useState(false);
   const [data, setData] = useState(null);
   const toggleVisible = () => {
     setModalVisible(true);
+  };
+  const increment = () => {
+    setCount(count + 1);
   };
   const spinValue = useRef(new Animated.Value(0)).current;
 
@@ -62,10 +66,10 @@ const GeneralList = () => {
   };
 
   const spin = spinValue.interpolate({
-    // inputRange: [0, 1],
-    // outputRange: ['0deg', '360deg'],
-    inputRange: [0, 0],
-    outputRange: ['0deg', '0deg'],
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+    // inputRange: [0, 0],
+    // outputRange: ['0deg', '0deg'],
   });
 
   return (
@@ -75,7 +79,13 @@ const GeneralList = () => {
         modalVisible={modalVisible}
         videoIds={data}
       />
-      <CountModal countModal={countModal} setCountModal={setCountModal} />
+      <CountModal
+        countModal={countModal}
+        setCountModal={setCountModal}
+        count={count}
+        setCount={setCount}
+        increment={increment}
+      />
       {/* <========modal end=======> */}
       <View
         style={{
@@ -106,6 +116,17 @@ const GeneralList = () => {
               setCountModal(!countModal);
             }}>
             <Text style={{color: 'white'}}>{t('count')}</Text>
+            <Badge
+              style={{
+                position: 'absolute',
+                top: -9,
+                right: 45,
+                backgroundColor: 'pink',
+                color: 'red',
+                fontWeight: 'bold',
+              }}>
+              {lang == 'en' ? count : convertMmDigit(count)}
+            </Badge>
           </TouchableOpacity>
         </View>
         {/* <======================> */}
