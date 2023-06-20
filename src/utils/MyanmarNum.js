@@ -3,7 +3,6 @@ const mmNum = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '�
 
 export function convertMmDigit(number) {
   let strNum = String(number);
-  console.log('stnum', strNum);
   let split = strNum.split('');
   let myan = '';
   for (let i = 0; i < split.length; i++) {

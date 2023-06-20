@@ -37,6 +37,9 @@ const LanguageChange = () => {
         <Text style={{color: 'white', fontSize: 16}}>မြန်မာ</Text>
         {lang === 'mm' && <Check color="#514BC3" size={24} />}
       </TouchableOpacity>
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{color: 'pink'}}>Developed by Aung Naing Phyo</Text>
+      </View>
     </View>
   );
 };

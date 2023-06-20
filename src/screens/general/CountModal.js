@@ -70,7 +70,7 @@ const CountModal = ({
                   padding: 9,
                   width: wp('60%'),
                   height: hp('9%'),
-                  marginVertical: hp('11%'),
+                  marginVertical: hp('5%'),
                   backgroundColor: 'white',
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -96,8 +96,8 @@ const CountModal = ({
               <TouchableOpacity
                 style={{
                   backgroundColor: 'yellow',
-                  width: wp('60%'),
-                  height: hp('30%'),
+                  width: 270,
+                  height: 270,
                   borderRadius: 150,
                   borderColor: 'white',
                   borderWidth: 6,
@@ -116,12 +116,10 @@ export default CountModal;
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
-    // justifyContent: 'center',
   },
   modalView: {
     flex: 1,
     backgroundColor: 'blue',
-    // alignItems: 'center',
   },
   button: {
     borderRadius: 20,

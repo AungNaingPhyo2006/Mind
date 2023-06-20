@@ -12,4 +12,6 @@ export default {
   dhamma_7: require('../assets/images/uztk.jpg'),
   dhamma_8: require('../assets/images/tsss.jpeg'),
   dhamma_9: require('../assets/images/cmrm.jpeg'),
+  dhamma_10: require('../assets/images/maharKan.jpeg'),
+  dhamma_11: require('../assets/images/minKon.jpeg'),
 };

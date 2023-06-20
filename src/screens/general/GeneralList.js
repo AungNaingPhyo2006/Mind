@@ -32,12 +32,14 @@ import {Badge} from 'react-native-paper';
 import {useTranslation} from 'react-i18next';
 import {convertMmDigit} from '../../utils/MyanmarNum';
 import CountModal from './CountModal';
+import PlayerController from './PlayerController';
 
 const GeneralList = () => {
   const {t} = useTranslation();
   const {lang} = useAppState(state => ({
     lang: state.lang,
   }));
+  const [pcontModal, setPcontModal] = useState(false);
   const [count, setCount] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [countModal, setCountModal] = useState(false);
@@ -66,10 +68,10 @@ const GeneralList = () => {
   };
 
   const spin = spinValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-    // inputRange: [0, 0],
-    // outputRange: ['0deg', '0deg'],
+    // inputRange: [0, 1],
+    // outputRange: ['0deg', '360deg'],
+    inputRange: [0, 0],
+    outputRange: ['0deg', '0deg'],
   });
 
   return (
@@ -86,6 +88,7 @@ const GeneralList = () => {
         setCount={setCount}
         increment={increment}
       />
+      <PlayerController pcontModal={pcontModal} setPcontModal={setPcontModal} />
       {/* <========modal end=======> */}
       <View
         style={{
@@ -105,6 +108,32 @@ const GeneralList = () => {
           paddingVertical: 12,
         }}
         showsVerticalScrollIndicator={false}>
+        {/* <============Player===========> */}
+        <View style={styles.container}>
+          <Animated.View
+            style={{...styles.imgContainer, transform: [{rotate: spin}]}}>
+            <Image source={AssetResource.wheel} style={styles.imageStyle} />
+          </Animated.View>
+          <TouchableOpacity
+            style={styles.txtContainer}
+            onPress={() => {
+              setPcontModal(!pcontModal);
+            }}>
+            <Text style={{color: 'white'}}>{t('paritta')}</Text>
+            {/* <Badge
+              style={{
+                position: 'absolute',
+                top: -9,
+                right: 45,
+                backgroundColor: 'pink',
+                color: 'red',
+                fontWeight: 'bold',
+              }}>
+              {lang == 'en' ? count : convertMmDigit(count)}
+            </Badge> */}
+          </TouchableOpacity>
+        </View>
+        {/* <======================> */}
         <View style={styles.container}>
           <Animated.View
             style={{...styles.imgContainer, transform: [{rotate: spin}]}}>

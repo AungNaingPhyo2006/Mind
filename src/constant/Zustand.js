@@ -2,7 +2,7 @@ import {create} from 'zustand';
 import NetInfo from '@react-native-community/netinfo';
 
 const useAppState = create(set => ({
-  lang: 'en',
+  lang: 'mm',
   isLoading: true,
   isOnline: false,
   modalVisible: false, // Add modalVisible state
